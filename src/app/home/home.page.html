@@ -1,14 +1,47 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Garden of Success
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <div class="ion-padding">
+        <ion-card>
+            <h2 text-center="">
+                this is canvas sandbox
+            </h2>
+            <canvas #canvas>
+
+            </canvas>
+        </ion-card>
+    </div>
+    <div class="ion-padding">
+        <ion-card>
+            <h2 text-center="">
+                this is svg sandbox
+            </h2>
+            <svg viewBox="0 0 250 300" #svg>
+                <svg:polygon points="125,30 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,230 203.9,186.3 218.1,63.2"/>
+                <svg:polygon points="125,30 125,52.2 125,52.1 125,153.4 125,153.4 125,230 125,230 203.9,186.3 218.1,63.2 125,30"/>
+                <svg:path d="M125,52.1L66.8,182.6h0h21.7h0l11.7-29.2h49.4l11.7,29.2h0h21.7h0L125,52.1L125,52.1L125,52.1L125,52.1
+      L125,52.1z M142,135.4H108l17-40.9L142,135.4z"/>
+            </svg>
+        </ion-card>
+    </div>
+    <div text-center="">
+        <ion-buttons>
+            <ion-button
+                    fill="outline"
+                    (click)="drawOnCanvas()">
+                Do something with canvas
+            </ion-button>
+            <ion-button
+                    fill="outline"
+                    (click)="drawOnSVG()">
+                Do something with svg
+            </ion-button>
+        </ion-buttons>
+    </div>
 </ion-content>
